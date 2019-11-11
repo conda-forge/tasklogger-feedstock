@@ -1,5 +1,5 @@
 {% set name = "tasklogger" %}
-{% set version = "0.4.2" %}
+{% set version = "1.0.0" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/scottgigante/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: b56192ce11c17ac74fd70b99c97cd034877f5a663bbf740d0e15e28c10ac3f31
+  sha256: 5a73fa407bdedd45e9ca6e8ee53ebd61ac5ed5d28f95447b6fc809f18b34aaa6
 
 build:
   number: 0
@@ -17,10 +17,10 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.5
   run:
     - future
-    - python
+    - python >=3.5
 
 test:
   imports:
@@ -36,3 +36,4 @@ about:
 extra:
   recipe-maintainers:
     - bebatut
+    - scottgigante
