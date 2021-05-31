@@ -20,7 +20,7 @@ requirements:
     - python >=3.6
   run:
     - python >=3.6
-    - Deprecated
+    - deprecated
 
 test:
   imports:
@@ -28,7 +28,7 @@ test:
 
 about:
   home: https://github.com/scottgigante/tasklogger
-  license: GPL-2.0
+  license: GPL-2.0-or-later
   license_family: GPL
   license_file: LICENSE
   summary: An extension to the core python logging library for logging the beginning and completion of tasks and subtasks
