@@ -17,10 +17,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.6
   run:
-    - future
-    - python >=3.5
+    - python >=3.6
+    - Deprecated
 
 test:
   imports:
