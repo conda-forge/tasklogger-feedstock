@@ -1,26 +1,26 @@
 {% set name = "tasklogger" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://github.com/scottgigante/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 5a73fa407bdedd45e9ca6e8ee53ebd61ac5ed5d28f95447b6fc809f18b34aaa6
+  sha256: 32aa40daee571a89d4ad1ec76ac9375337a744c658f1f063a376a4d621d23776
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.6
   run:
-    - future
-    - python >=3.5
+    - python >=3.6
+    - deprecated
 
 test:
   imports:
@@ -28,7 +28,7 @@ test:
 
 about:
   home: https://github.com/scottgigante/tasklogger
-  license: GPL-2.0
+  license: GPL-2.0-or-later
   license_family: GPL
   license_file: LICENSE
   summary: An extension to the core python logging library for logging the beginning and completion of tasks and subtasks
