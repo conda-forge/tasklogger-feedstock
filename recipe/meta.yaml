@@ -1,5 +1,5 @@
 {% set name = "tasklogger" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/scottgigante/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 32aa40daee571a89d4ad1ec76ac9375337a744c658f1f063a376a4d621d23776
+  sha256: 489ab5172523cba66e9afffe10b5abcfeb46e1bfafa66cafb199c148175b14f5
 
 build:
   number: 0
