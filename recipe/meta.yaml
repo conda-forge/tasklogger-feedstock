@@ -10,19 +10,21 @@ source:
   sha256: 622e400061b5a603054c227cbfc08af035c47b822e38e5ee2803301744d35687
 
 build:
-  number: 0
+  number: 1
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - deprecated
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - tasklogger
 
